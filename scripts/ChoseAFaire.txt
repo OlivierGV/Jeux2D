@@ -1,0 +1,30 @@
+-- Scripts de mouvement --
+Pouvoir dasher uniquement sur le sol (invincible lors du dash, on peut traverser les ennemis + est-ce qu'on fait en sorte de pouvoir occasionner des dommages lors de la traversée? à voir)
+Pouvoir faire un double-saut
+Pouvoir faire une attaque vers le bas (Bas + Attaque = Descente plus rapide et dommage occasionné)
+Pouvoir tirer à l'arbalète si munitions. (Peut tirer au sol comme en l'air)
+Pouvoir réaliser une attaque différente dépendemment de la touche (3 attaques différentes)
+
+-- Scripts de collisions et événements --
+Lorsqu'on ramasse des munitions, l'ajouter dans un inventaire
+Lorsqu'on ramasse des points, l'ajouter dans un score
+Lorsqu'on tue un ennemi, ajouter des points au score
+Lorsqu'on tue un boss, ajouter encore plus de points au score
+Lorsqu'on meurt, enlever des points au score
+
+-- Scripts des ennemis --
+Si possible, pouvoir ne pas être détecté par les ennemis sauf si on est près d'eux. Plus de dégât si l'état furtif est vrai?
+Les ennemis avec des attaques au corps à corps doivent courir vers le joueur et l'attaquer quand distance == 0
+Les ennemis à distance doivent vers le joueur et l'attaquer après une certaine distance
+Les chiens courrent plus vite
+
+
+-- Scripts des passifs --
+Après chaque boss, on actualise la liste des passifs
+On donne au joueur la possibilité entre 3 passifs et il peut choisir 1 d'entres-elles
+Un passif se gagne après avoir tué un boss, et persiste jusqu'à la mort du joueur, il perd ses passifs après sa mort
+Les passifs principaux sont :
+- Réduction des prix du marchand
+- Augmentation des dommages
+- Augmentation de la vitesse de déplacement
+- Drain de vie (lorsqu'on frappe un ennemi, on gagne x% des dégâts infligés)
