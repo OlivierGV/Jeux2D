@@ -1,0 +1,99 @@
+[gd_scene load_steps=15 format=3 uid="uid://r7syvaa5mi0p"]
+
+[ext_resource type="Texture2D" uid="uid://dqmhfb85ljgxv" path="res://Assets/craftpix-net-506778-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Blood_Charge_1.png" id="1_didaq"]
+[ext_resource type="Texture2D" uid="uid://b3ecatmy0abcg" path="res://Assets/craftpix-net-506778-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Blood_Charge_2.png" id="2_b7xsv"]
+[ext_resource type="Texture2D" uid="uid://torrapfogbdr" path="res://Assets/craftpix-net-506778-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Blood_Charge_3.png" id="3_4n2xg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0b31"]
+atlas = ExtResource("1_didaq")
+region = Rect2(0, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2fd3"]
+atlas = ExtResource("1_didaq")
+region = Rect2(64, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5f8e1"]
+atlas = ExtResource("1_didaq")
+region = Rect2(128, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhu8p"]
+atlas = ExtResource("2_b7xsv")
+region = Rect2(0, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vwls"]
+atlas = ExtResource("2_b7xsv")
+region = Rect2(64, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kglt4"]
+atlas = ExtResource("2_b7xsv")
+region = Rect2(128, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofymb"]
+atlas = ExtResource("3_4n2xg")
+region = Rect2(0, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ue586"]
+atlas = ExtResource("3_4n2xg")
+region = Rect2(64, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m34nf"]
+atlas = ExtResource("3_4n2xg")
+region = Rect2(128, 0, 64, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n2yi2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0b31")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2fd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5f8e1")
+}],
+"loop": true,
+"name": &"attack1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhu8p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vwls")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kglt4")
+}],
+"loop": true,
+"name": &"attack2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofymb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ue586")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m34nf")
+}],
+"loop": true,
+"name": &"attack3",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bwaut"]
+size = Vector2(39, 40)
+
+[node name="ProjectileJoueur" type="CharacterBody2D"]
+
+[node name="AnimatedSpriteProjectile" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_n2yi2")
+animation = &"attack1"
+
+[node name="CollisionProjectile" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -1)
+shape = SubResource("RectangleShape2D_bwaut")
