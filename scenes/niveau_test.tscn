@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://broxkghng0wv0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uh47m"]
+size = Vector2(1147, 103)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(1, -2, 1153, 0, 1152, 99, 0, 97)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(577.5, 48.5)
+shape = SubResource("RectangleShape2D_uh47m")
