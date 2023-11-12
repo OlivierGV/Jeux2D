@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bb7xsxkxy2uvf"]
+
+[node name="MenuMagasin" type="ColorRect"]
+offset_right = 645.0
+offset_bottom = 329.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="ItemList_objets" type="ItemList" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 635.0
+offset_bottom = 253.0
+item_count = 2
+item_0/text = "un item"
+item_1/text = "un autre"
+
+[node name="Button_acheter" type="Button" parent="."]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 271.0
+offset_right = 142.0
+offset_bottom = 311.0
+text = "Acheter"
+
+[node name="Button2_quitter" type="Button" parent="."]
+offset_left = 501.0
+offset_top = 270.0
+offset_right = 594.0
+offset_bottom = 310.0
+text = "Quitter"
+
+[node name="RichTextLabel_argent" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 282.0
+offset_right = 407.0
+offset_bottom = 322.0
+text = "Argent : 0"

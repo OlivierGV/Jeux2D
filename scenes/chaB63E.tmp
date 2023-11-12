@@ -273,6 +273,3 @@ wait_time = 5.0
 
 [node name="MarkerProjectile" type="Marker2D" parent="."]
 position = Vector2(40, 11)
-
-[node name="MarkerEpee" type="Marker2D" parent="."]
-position = Vector2(32, -24)

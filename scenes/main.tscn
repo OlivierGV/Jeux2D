@@ -1,12 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://dm4pup8hjvdwn"]
+[gd_scene load_steps=4 format=3 uid="uid://dm4pup8hjvdwn"]
 
 [ext_resource type="PackedScene" uid="uid://cid30r6100elw" path="res://Scenes/character_countess.tscn" id="1_vsps0"]
+[ext_resource type="PackedScene" uid="uid://c2ulio8yogxv8" path="res://Scenes/body_epee.tscn" id="2_cn4ar"]
 [ext_resource type="PackedScene" uid="uid://broxkghng0wv0" path="res://Scenes/niveau_test.tscn" id="2_k06t5"]
 
 [node name="Main" type="Node"]
 
 [node name="CharacterCountess" parent="." instance=ExtResource("1_vsps0")]
 position = Vector2(119, 148)
+
+[node name="BodyEpee" parent="CharacterCountess" instance=ExtResource("2_cn4ar")]
+position = Vector2(34, -22)
 
 [node name="NiveauTest" parent="." instance=ExtResource("2_k06t5")]
 position = Vector2(12, 266)

@@ -12,11 +12,20 @@ var next_animation = ""
 var current_animation = ""
 
 var hp = 100
+var sceneProjectile = preload('res://Scenes/projectile_joueur.tscn')
+var sceneEpee = preload('res://Scenes/body_epee.tscn')
+@onready var epee = self.get_node('BodyEpee')
 
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
+	
+	# Gérer l'attaque 
+	if Input.is_action_just_pressed("click"):
+		next_animation = "attack1"
+		#attaquer()
+		lancer_epee()
 	
 	# Gérer le dash 
 	if $TimerDash.is_stopped():
@@ -60,7 +69,7 @@ func _physics_process(delta):
 	if next_animation != current_animation:
 		changer_animation(next_animation)
 		
-	if is_on_floor() and not Input.is_action_pressed("ui_right") and not Input.is_action_pressed("ui_left") and not Input.is_action_just_pressed("ui_accept"):
+	if is_on_floor() and not Input.is_action_pressed("ui_right") and not Input.is_action_pressed("ui_left") and not Input.is_action_just_pressed("ui_accept") and not Input.is_action_just_pressed("click"):
 		next_animation = "idle"
 		
 		
@@ -93,3 +102,27 @@ func changer_animation(animation):
 	$AnimatedSpriteCountess.play(animation)
 	current_animation = animation 
 	next_animation = ""
+
+
+func attaquer():
+	var projectile = sceneEpee.instantiate()
+	projectile.position = $MarkerProjectile.global_position
+	projectile.rotation = 45
+	projectile.velocity = Vector2(1,0)#get_global_mouse_position() - projectile.position
+	get_tree().root.add_child(projectile)
+
+func lancer_epee():
+	epee.position = $MarkerProjectile.position #J'ai dû enlever global_position
+	epee.rotation = 45
+	epee.lancer()
+	epee.velocity = Vector2(1,0)#get_global_mouse_position() - projectile.position
+	#$TimerDash.start()
+	#await $TimerDash.timeout
+	#$TimerDash.stop()
+	#epee.rotation = 270
+	#epee.velocity = Vector2(-1,0)#get_global_mouse_position() - projectile.position
+	#epee.connect('signal_retourner_epee', self, 'retourner_epee')
+
+func retourner_epee(): 
+	if epee.position.x - $CharacterCountess.position.x < 100:
+		print("allo")

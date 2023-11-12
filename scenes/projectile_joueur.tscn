@@ -1,8 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://r7syvaa5mi0p"]
+[gd_scene load_steps=17 format=3 uid="uid://r7syvaa5mi0p"]
 
+[ext_resource type="Script" path="res://Scripts/projectile_joueur.gd" id="1_1wjqw"]
 [ext_resource type="Texture2D" uid="uid://dqmhfb85ljgxv" path="res://Assets/craftpix-net-506778-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Blood_Charge_1.png" id="1_didaq"]
 [ext_resource type="Texture2D" uid="uid://b3ecatmy0abcg" path="res://Assets/craftpix-net-506778-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Blood_Charge_2.png" id="2_b7xsv"]
 [ext_resource type="Texture2D" uid="uid://torrapfogbdr" path="res://Assets/craftpix-net-506778-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Blood_Charge_3.png" id="3_4n2xg"]
+[ext_resource type="Script" path="res://Scripts/AnimatedSpriteProjectile.gd" id="5_0skul"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h0b31"]
 atlas = ExtResource("1_didaq")
@@ -89,11 +91,15 @@ animations = [{
 size = Vector2(39, 40)
 
 [node name="ProjectileJoueur" type="CharacterBody2D"]
+script = ExtResource("1_1wjqw")
 
 [node name="AnimatedSpriteProjectile" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_n2yi2")
 animation = &"attack1"
+script = ExtResource("5_0skul")
 
 [node name="CollisionProjectile" type="CollisionShape2D" parent="."]
 position = Vector2(1.5, -1)
 shape = SubResource("RectangleShape2D_bwaut")
+
+[connection signal="animation_finished" from="AnimatedSpriteProjectile" to="AnimatedSpriteProjectile" method="_on_animation_finished"]

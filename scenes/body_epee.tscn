@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://c2ulio8yogxv8"]
+
+[ext_resource type="Texture2D" uid="uid://n7r6hylpy0vg" path="res://Assets/idle1.png" id="1_mrlxe"]
+[ext_resource type="Script" path="res://Scripts/body_epee.gd" id="1_un442"]
+[ext_resource type="Texture2D" uid="uid://d3om01dducdn2" path="res://Assets/idle2.png" id="2_6i3cy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hb8lb"]
+atlas = ExtResource("1_mrlxe")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wik3c"]
+atlas = ExtResource("2_6i3cy")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kot87"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hb8lb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wik3c")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4hmym"]
+size = Vector2(31, 33)
+
+[node name="BodyEpee" type="CharacterBody2D"]
+script = ExtResource("1_un442")
+
+[node name="SpriteEpee" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kot87")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.581186
+
+[node name="CollisionEpee" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -1.5)
+shape = SubResource("RectangleShape2D_4hmym")
+
+[node name="TimerRetour" type="Timer" parent="."]
+
+[connection signal="timeout" from="TimerRetour" to="." method="_on_timer_retour_timeout"]
