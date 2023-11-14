@@ -12,6 +12,16 @@ var next_animation = ""
 var current_animation = ""
 
 var hp = 100
+var argent = 0
+
+var inventaire = {
+	"Flèche":{"quantite":0, "icone":'res://icon.svg', "type":"Ammunition"},
+	"Couteau à lancer":{"quantite":0, "icone":'res://icon.svg', "type":"Arme secondaire"},
+	"Eau bénite":{"quantite":0, "icone":'res://icon.svg', "type":"Projectile"},
+	"Bombe paralysante":{"quantite":0, "icone":'res://icon.svg', "type":"Projectile"},
+	"Cape":{"quantite":0, "icone":'res://icon.svg', "type":"Armure"}
+}
+
 var sceneProjectile = preload('res://Scenes/projectile_joueur.tscn')
 var sceneEpee = preload('res://Scenes/body_epee.tscn')
 @onready var epee = self.get_node('BodyEpee')
@@ -20,7 +30,9 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
-	
+	# Gérer la vie 
+	if hp <= 0:
+		mourir()
 	# Gérer l'attaque 
 	if Input.is_action_just_pressed("click"):
 		next_animation = "attack1"
@@ -104,6 +116,9 @@ func changer_animation(animation):
 	next_animation = ""
 
 
+"""
+Fonction pour un projectile normal
+"""
 func attaquer():
 	var projectile = sceneEpee.instantiate()
 	projectile.position = $MarkerProjectile.global_position
@@ -111,18 +126,18 @@ func attaquer():
 	projectile.velocity = Vector2(1,0)#get_global_mouse_position() - projectile.position
 	get_tree().root.add_child(projectile)
 
+
+"""
+Fonction pour lancer l'épée
+"""
 func lancer_epee():
 	epee.position = $MarkerProjectile.position #J'ai dû enlever global_position
 	epee.rotation = 45
 	epee.lancer()
 	epee.velocity = Vector2(1,0)#get_global_mouse_position() - projectile.position
-	#$TimerDash.start()
-	#await $TimerDash.timeout
-	#$TimerDash.stop()
-	#epee.rotation = 270
-	#epee.velocity = Vector2(-1,0)#get_global_mouse_position() - projectile.position
-	#epee.connect('signal_retourner_epee', self, 'retourner_epee')
 
-func retourner_epee(): 
-	if epee.position.x - $CharacterCountess.position.x < 100:
-		print("allo")
+"""
+Fonction pour mourrir
+"""
+func mourir():
+	$AnimatedSpriteCountess.play("dead")

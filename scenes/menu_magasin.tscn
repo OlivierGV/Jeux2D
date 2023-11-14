@@ -1,19 +1,35 @@
-[gd_scene format=3 uid="uid://bb7xsxkxy2uvf"]
+[gd_scene load_steps=2 format=3 uid="uid://bb7xsxkxy2uvf"]
+
+[ext_resource type="Script" path="res://Scripts/menu_magasin.gd" id="1_ljey2"]
 
 [node name="MenuMagasin" type="ColorRect"]
+process_mode = 3
 offset_right = 645.0
 offset_bottom = 329.0
 color = Color(0.172549, 0.172549, 0.172549, 1)
+script = ExtResource("1_ljey2")
 
 [node name="ItemList_objets" type="ItemList" parent="."]
+process_mode = 3
 layout_mode = 0
 offset_left = 9.0
 offset_top = 9.0
 offset_right = 635.0
 offset_bottom = 253.0
-item_count = 2
-item_0/text = "un item"
-item_1/text = "un autre"
+max_text_lines = 2
+item_count = 3
+max_columns = 3
+same_column_width = true
+icon_mode = 0
+item_0/text = "Nom"
+item_0/selectable = false
+item_0/disabled = true
+item_1/text = "Type"
+item_1/selectable = false
+item_1/disabled = true
+item_2/text = "Cout"
+item_2/selectable = false
+item_2/disabled = true
 
 [node name="Button_acheter" type="Button" parent="."]
 layout_mode = 0
@@ -24,6 +40,7 @@ offset_bottom = 311.0
 text = "Acheter"
 
 [node name="Button2_quitter" type="Button" parent="."]
+layout_mode = 0
 offset_left = 501.0
 offset_top = 270.0
 offset_right = 594.0
@@ -37,3 +54,7 @@ offset_top = 282.0
 offset_right = 407.0
 offset_bottom = 322.0
 text = "Argent : 0"
+
+[connection signal="item_selected" from="ItemList_objets" to="." method="_on_item_list_objets_item_selected"]
+[connection signal="pressed" from="Button_acheter" to="." method="_on_button_acheter_pressed"]
+[connection signal="pressed" from="Button2_quitter" to="." method="_on_button_2_quitter_pressed"]

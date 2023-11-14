@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=3 uid="uid://ckbhqe5smkstk"]
+
+[ext_resource type="Script" path="res://Scripts/CharacterMarchand.gd" id="1_1wojb"]
+[ext_resource type="Texture2D" uid="uid://dmy3h36ngwk8l" path="res://Assets/craftpix-net-506778-free-vampire-pixel-art-sprite-sheets/Vampire_Girl/Idle.png" id="2_5d2i7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8gu8p"]
+atlas = ExtResource("2_5d2i7")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnhlg"]
+atlas = ExtResource("2_5d2i7")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7s58q"]
+atlas = ExtResource("2_5d2i7")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_444wy"]
+atlas = ExtResource("2_5d2i7")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2d3s"]
+atlas = ExtResource("2_5d2i7")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0dewd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8gu8p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qnhlg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7s58q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_444wy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2d3s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5bn7p"]
+size = Vector2(132, 92)
+
+[node name="CharacterMarchand" type="CharacterBody2D"]
+script = ExtResource("1_1wojb")
+
+[node name="SpriteMarchand" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0dewd")
+
+[node name="Area2DMarchand" type="Area2D" parent="."]
+
+[node name="CollisionAreaMarchand" type="CollisionShape2D" parent="Area2DMarchand"]
+position = Vector2(1, 20)
+shape = SubResource("RectangleShape2D_5bn7p")
+
+[connection signal="body_entered" from="Area2DMarchand" to="." method="_on_area_2d_marchand_body_entered"]
+[connection signal="body_exited" from="Area2DMarchand" to="." method="_on_area_2d_marchand_body_exited"]
