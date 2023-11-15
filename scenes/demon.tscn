@@ -1,0 +1,152 @@
+[gd_scene load_steps=22 format=3 uid="uid://4yooibbysfqv"]
+
+[ext_resource type="Texture2D" uid="uid://dv60ja2dke3ii" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/demon/demon-attack.png" id="1_e70im"]
+[ext_resource type="Texture2D" uid="uid://dc05pomfxj0qj" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/demon/demon-idle.png" id="2_n2x6c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtow4"]
+atlas = ExtResource("1_e70im")
+region = Rect2(0, 0, 240, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_socaq"]
+atlas = ExtResource("1_e70im")
+region = Rect2(240, 0, 240, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e7rd0"]
+atlas = ExtResource("1_e70im")
+region = Rect2(480, 0, 240, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khivq"]
+atlas = ExtResource("1_e70im")
+region = Rect2(720, 0, 240, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yofxn"]
+atlas = ExtResource("1_e70im")
+region = Rect2(960, 0, 240, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5f2w"]
+atlas = ExtResource("1_e70im")
+region = Rect2(1200, 0, 240, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwxbv"]
+atlas = ExtResource("1_e70im")
+region = Rect2(1440, 0, 240, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_op4rf"]
+atlas = ExtResource("1_e70im")
+region = Rect2(1680, 0, 240, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bq8dk"]
+atlas = ExtResource("1_e70im")
+region = Rect2(1920, 0, 240, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqq70"]
+atlas = ExtResource("1_e70im")
+region = Rect2(2160, 0, 240, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rascc"]
+atlas = ExtResource("1_e70im")
+region = Rect2(2400, 0, 240, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kxkrg"]
+atlas = ExtResource("2_n2x6c")
+region = Rect2(0, 0, 160, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x65wd"]
+atlas = ExtResource("2_n2x6c")
+region = Rect2(160, 0, 160, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m28ot"]
+atlas = ExtResource("2_n2x6c")
+region = Rect2(320, 0, 160, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58flj"]
+atlas = ExtResource("2_n2x6c")
+region = Rect2(480, 0, 160, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5jvp"]
+atlas = ExtResource("2_n2x6c")
+region = Rect2(640, 0, 160, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ercvh"]
+atlas = ExtResource("2_n2x6c")
+region = Rect2(800, 0, 160, 144)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ldxfn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rtow4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_socaq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e7rd0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khivq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yofxn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s5f2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwxbv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_op4rf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bq8dk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqq70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rascc")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kxkrg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x65wd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m28ot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58flj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5jvp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ercvh")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gxidt"]
+radius = 43.0
+height = 100.0
+
+[node name="demon" type="CharacterBody2D"]
+
+[node name="sprite_demon" type="AnimatedSprite2D" parent="."]
+position = Vector2(-17, -29)
+sprite_frames = SubResource("SpriteFrames_ldxfn")
+animation = &"idle"
+frame_progress = 0.779832
+
+[node name="collision_demon" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CapsuleShape2D_gxidt")
