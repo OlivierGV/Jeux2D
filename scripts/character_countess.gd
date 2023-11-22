@@ -117,7 +117,7 @@ func changer_animation(animation):
 
 
 """
-Fonction pour un projectile normal
+Fonction pour un projectile normal => à changer pour une flèche, de l'eau bénite, blabla
 """
 func attaquer():
 	var projectile = sceneEpee.instantiate()
@@ -137,7 +137,7 @@ func lancer_epee():
 	epee.velocity = Vector2(1,0)#get_global_mouse_position() - projectile.position
 
 """
-Fonction pour mourrir
+Fonction pour mourrir, manque qqch pour finir le jeu
 """
 func mourir():
 	$AnimatedSpriteCountess.play("dead")
