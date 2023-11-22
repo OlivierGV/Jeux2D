@@ -1,0 +1,108 @@
+[gd_scene load_steps=21 format=3 uid="uid://bsn1diydv5mhy"]
+
+[ext_resource type="Script" path="res://wolf.gd" id="1_2qlur"]
+[ext_resource type="Texture2D" uid="uid://bwtadofuebaqa" path="res://assets/Sprites-et-tilesets/Foret/Ennemis/werewolf/idle/1.png" id="1_8jbfa"]
+[ext_resource type="Texture2D" uid="uid://c11w5cybe8kek" path="res://assets/Sprites-et-tilesets/Foret/Ennemis/werewolf/idle/2.png" id="2_vbivs"]
+[ext_resource type="Texture2D" uid="uid://bs6dc44akw25i" path="res://assets/Sprites-et-tilesets/Foret/Ennemis/werewolf/idle/3.png" id="3_xnm7y"]
+[ext_resource type="Texture2D" uid="uid://dfubw3w7y4fid" path="res://assets/Sprites-et-tilesets/Foret/Ennemis/werewolf/idle/4.png" id="4_p1hlc"]
+[ext_resource type="Texture2D" uid="uid://dv8ox7qcqwxf5" path="res://assets/Sprites-et-tilesets/Foret/Ennemis/werewolf/idle/5.png" id="5_r7fu2"]
+[ext_resource type="Texture2D" uid="uid://66r0e5gagdi3" path="res://assets/Sprites-et-tilesets/Foret/Ennemis/werewolf/idle/6.png" id="6_qywak"]
+[ext_resource type="Texture2D" uid="uid://cwedtl6eur2fn" path="res://assets/Sprites-et-tilesets/Foret/Ennemis/werewolf/idle/7.png" id="7_uw1vy"]
+[ext_resource type="Texture2D" uid="uid://rig7pxgsdein" path="res://assets/Sprites-et-tilesets/Foret/Ennemis/werewolf/idle/8.png" id="8_xsysp"]
+[ext_resource type="Texture2D" uid="uid://dh0ho0ixd4vnw" path="res://assets/Sprites-et-tilesets/Foret/Ennemis/werewolf/walk/1.png" id="9_3s05i"]
+[ext_resource type="Texture2D" uid="uid://c2so1olyj6y0a" path="res://assets/Sprites-et-tilesets/Foret/Ennemis/werewolf/walk/2.png" id="10_juo1r"]
+[ext_resource type="Texture2D" uid="uid://d7dfe3f2ej1h" path="res://assets/Sprites-et-tilesets/Foret/Ennemis/werewolf/walk/3.png" id="11_adn83"]
+[ext_resource type="Texture2D" uid="uid://cnvlvwkadwtwk" path="res://assets/Sprites-et-tilesets/Foret/Ennemis/werewolf/walk/4.png" id="12_tt5gp"]
+[ext_resource type="Texture2D" uid="uid://bs01lfw68g57h" path="res://assets/Sprites-et-tilesets/Foret/Ennemis/werewolf/walk/5.png" id="13_ch6gl"]
+[ext_resource type="Texture2D" uid="uid://ceku23o6u7ti3" path="res://assets/Sprites-et-tilesets/Foret/Ennemis/werewolf/walk/6.png" id="14_k3h37"]
+[ext_resource type="Texture2D" uid="uid://cj01qmjc8hper" path="res://assets/Sprites-et-tilesets/Foret/Ennemis/werewolf/walk/7.png" id="15_bnmvr"]
+[ext_resource type="Texture2D" uid="uid://cc88j0gj28i3w" path="res://assets/Sprites-et-tilesets/Foret/Ennemis/werewolf/walk/8.png" id="16_w0fsu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ipcy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8jbfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vbivs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xnm7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_p1hlc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_r7fu2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qywak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_uw1vy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xsysp")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_3s05i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_juo1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_tt5gp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_adn83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ch6gl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_k3h37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_bnmvr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_w0fsu")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 9.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_thcl7"]
+size = Vector2(93, 111)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r11sc"]
+size = Vector2(417, 283)
+
+[node name="wolf" type="CharacterBody2D"]
+script = ExtResource("1_2qlur")
+
+[node name="wolfsprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5ipcy")
+animation = &"idle"
+
+[node name="wolf-collision" type="CollisionShape2D" parent="."]
+position = Vector2(3.5, -8.5)
+shape = SubResource("RectangleShape2D_thcl7")
+
+[node name="detectionzone" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detectionzone"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_r11sc")
+
+[connection signal="body_entered" from="detectionzone" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="detectionzone" to="." method="_on_detection_area_body_exited"]

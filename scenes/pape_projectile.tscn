@@ -1,0 +1,64 @@
+[gd_scene load_steps=13 format=3 uid="uid://dnn0lqq3efjpl"]
+
+[ext_resource type="Texture2D" uid="uid://b4kshhpahr441" path="res://assets/Sprites-et-tilesets/Eglise/Ennemis/pope/proj/1.png" id="1_rdyhc"]
+[ext_resource type="Texture2D" uid="uid://dxi0n5edsyjuq" path="res://assets/Sprites-et-tilesets/Eglise/Ennemis/pope/proj/2.png" id="2_ktfac"]
+[ext_resource type="Texture2D" uid="uid://ctxj1wadejsv5" path="res://assets/Sprites-et-tilesets/Eglise/Ennemis/pope/proj/3.png" id="3_vcxcg"]
+[ext_resource type="Texture2D" uid="uid://i45ear6sost7" path="res://assets/Sprites-et-tilesets/Eglise/Ennemis/pope/proj/4.png" id="4_4xw0s"]
+[ext_resource type="Texture2D" uid="uid://bdf7jo7yhw4n6" path="res://assets/Sprites-et-tilesets/Eglise/Ennemis/pope/proj/5.png" id="5_pcpm5"]
+[ext_resource type="Texture2D" uid="uid://duuoju7fylbpg" path="res://assets/Sprites-et-tilesets/Eglise/Ennemis/pope/proj/6.png" id="6_jjwjj"]
+[ext_resource type="Texture2D" uid="uid://bcd06hxukfbp2" path="res://assets/Sprites-et-tilesets/Eglise/Ennemis/pope/proj/7.png" id="7_3asu7"]
+[ext_resource type="Texture2D" uid="uid://bh6uvj3m1h7tw" path="res://assets/Sprites-et-tilesets/Eglise/Ennemis/pope/proj/8.png" id="8_8me5c"]
+[ext_resource type="Texture2D" uid="uid://ch0f4m7yspdv8" path="res://assets/Sprites-et-tilesets/Eglise/Ennemis/pope/proj/9.png" id="9_f5dbp"]
+[ext_resource type="Texture2D" uid="uid://0g2clqn4hacd" path="res://assets/Sprites-et-tilesets/Eglise/Ennemis/pope/proj/10.png" id="10_paet2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rakgg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rdyhc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ktfac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vcxcg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4xw0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pcpm5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jjwjj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3asu7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8me5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_f5dbp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_paet2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_15dj3"]
+radius = 48.0104
+
+[node name="pape_projectile" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_rakgg")
+frame_progress = 0.311958
+offset = Vector2(11, -13)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_15dj3")
+disabled = true

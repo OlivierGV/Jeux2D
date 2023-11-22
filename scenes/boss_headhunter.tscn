@@ -1,0 +1,130 @@
+[gd_scene load_steps=22 format=3 uid="uid://dqlcbmfhv2qdu"]
+
+[ext_resource type="Texture2D" uid="uid://dtuv56x66xn8" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/boss/attaque/1.png" id="1_pe2jo"]
+[ext_resource type="Texture2D" uid="uid://fi23g1rv34ld" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/boss/attaque/2.png" id="2_1mih4"]
+[ext_resource type="Texture2D" uid="uid://dcvasi8forqcm" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/boss/attaque/3.png" id="3_gfge7"]
+[ext_resource type="Texture2D" uid="uid://b3dl1u7qfleof" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/boss/die/1.png" id="4_03cpo"]
+[ext_resource type="Texture2D" uid="uid://kjhh8wdwhyli" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/boss/die/2.png" id="5_eg62m"]
+[ext_resource type="Texture2D" uid="uid://b1s4ydhr6u1qx" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/boss/die/3.png" id="6_71jar"]
+[ext_resource type="Texture2D" uid="uid://d2h0tdl35hbik" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/boss/die/4.png" id="7_2npvv"]
+[ext_resource type="Texture2D" uid="uid://scx2wui6p5h5" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/boss/idle/boss_0000_Calque-1.png" id="8_o16mr"]
+[ext_resource type="Texture2D" uid="uid://bsjbytwppwdgo" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/boss/idle/boss_0001_Calque-2.png" id="9_dn75f"]
+[ext_resource type="Texture2D" uid="uid://c6cdov5ngv6dp" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/boss/idle/boss_0002_Calque-3.png" id="10_31ndy"]
+[ext_resource type="Texture2D" uid="uid://dei3yrkxi7ty" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/boss/idle/boss_0003_Calque-4.png" id="11_5cgxe"]
+[ext_resource type="Texture2D" uid="uid://bsoddprt2o4bl" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/boss/idle/boss_0004_Calque-5.png" id="12_sqs4p"]
+[ext_resource type="Texture2D" uid="uid://dpi68eduidecp" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/boss/walk/1.png" id="13_cpmpo"]
+[ext_resource type="Texture2D" uid="uid://b6vf0caidvgc2" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/boss/walk/2.png" id="14_itlak"]
+[ext_resource type="Texture2D" uid="uid://g7kaol464mwh" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/boss/walk/3.png" id="15_crx1h"]
+[ext_resource type="Texture2D" uid="uid://b6b0uhw414ctx" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/boss/walk/4.png" id="16_mwvvg"]
+[ext_resource type="Texture2D" uid="uid://jrjcvlcs5b5s" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/boss/walk/5.png" id="17_hu35l"]
+[ext_resource type="Texture2D" uid="uid://ckfqsmtkhlh85" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/boss/walk/6.png" id="18_0y0fn"]
+[ext_resource type="Texture2D" uid="uid://o1mgtjcs45l3" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/boss/walk/7.png" id="19_3slta"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3yckv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pe2jo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_pe2jo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1mih4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gfge7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gfge7")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_03cpo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_eg62m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_71jar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2npvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2npvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2npvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2npvv")
+}],
+"loop": true,
+"name": &"die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_o16mr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dn75f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_31ndy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5cgxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_sqs4p")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_cpmpo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_itlak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_crx1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_mwvvg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_hu35l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_0y0fn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_3slta")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwscf"]
+size = Vector2(88, 114)
+
+[node name="boss_headhunter" type="CharacterBody2D"]
+
+[node name="headhunter_sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_3yckv")
+animation = &"attack"
+frame_progress = 0.625334
+
+[node name="headhunter_collision" type="CollisionShape2D" parent="."]
+position = Vector2(1, 23)
+shape = SubResource("RectangleShape2D_kwscf")

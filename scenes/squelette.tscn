@@ -1,0 +1,85 @@
+[gd_scene load_steps=17 format=3 uid="uid://blu8x02odcd1a"]
+
+[ext_resource type="Texture2D" uid="uid://bnr754qmu7jw1" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/skeleton/skeleton-1.png" id="1_qcs3y"]
+[ext_resource type="Texture2D" uid="uid://d3g80codhtjvf" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/skeleton/skeleton-2.png" id="2_uiler"]
+[ext_resource type="Texture2D" uid="uid://dgmptxl8xytu0" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/skeleton/skeleton-3.png" id="3_ug45y"]
+[ext_resource type="Texture2D" uid="uid://0j5mui2vcve6" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/skeleton/skeleton-4.png" id="4_kq0bq"]
+[ext_resource type="Texture2D" uid="uid://bvpltsb3syfiq" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/skeleton/skeleton-5.png" id="5_5wuyn"]
+[ext_resource type="Texture2D" uid="uid://bs0j5cpf8dg77" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/skeleton/skeleton-6.png" id="6_eqmgx"]
+[ext_resource type="Texture2D" uid="uid://ieff6b5ufbtl" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/skeleton/skeleton-7.png" id="7_d8tgj"]
+[ext_resource type="Texture2D" uid="uid://c13v5wlhvqkb" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/skeleton/skeleton-8.png" id="8_u63ef"]
+[ext_resource type="Texture2D" uid="uid://10psguh6eqsk" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/skeleton-rise/skeleton-rise-1.png" id="9_nsexl"]
+[ext_resource type="Texture2D" uid="uid://cuyk87f47jkp7" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/skeleton-rise/skeleton-rise-2.png" id="10_6fbnf"]
+[ext_resource type="Texture2D" uid="uid://gawqbdo1rgwu" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/skeleton-rise/skeleton-rise-3.png" id="11_mfexy"]
+[ext_resource type="Texture2D" uid="uid://dud2be1fc37ky" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/skeleton-rise/skeleton-rise-4.png" id="12_x3nn1"]
+[ext_resource type="Texture2D" uid="uid://chx8wgr60cf6e" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/skeleton-rise/skeleton-rise-5.png" id="13_n1upn"]
+[ext_resource type="Texture2D" uid="uid://dvsa5a60kv2tf" path="res://assets/Sprites-et-tilesets/Cimetiere/Ennemis/skeleton-rise/skeleton-rise-6.png" id="14_tagrc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w4rs7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qcs3y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_uiler")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ug45y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kq0bq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5wuyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_eqmgx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_d8tgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_u63ef")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_nsexl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_6fbnf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mfexy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_x3nn1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_n1upn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_tagrc")
+}],
+"loop": true,
+"name": &"spawn",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xicnx"]
+size = Vector2(27, 42)
+
+[node name="squelette" type="CharacterBody2D"]
+
+[node name="squelette-sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_w4rs7")
+animation = &"spawn"
+frame_progress = 0.855337
+
+[node name="squelette-collision" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 5)
+shape = SubResource("RectangleShape2D_xicnx")
