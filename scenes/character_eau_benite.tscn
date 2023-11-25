@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cq0emiqf17by5"]
+
+[ext_resource type="Script" path="res://Scripts/CharacterEauBenite.gd" id="1_fwbn5"]
+[ext_resource type="Texture2D" uid="uid://cd75yt4gc16oj" path="res://Assets/ArmesSecondaires/iconeeau.png" id="2_bdu0o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qm7u3"]
+size = Vector2(146, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f8fqe"]
+
+[node name="CharacterEauBenite" type="CharacterBody2D"]
+script = ExtResource("1_fwbn5")
+
+[node name="SpriteEauBenite" type="Sprite2D" parent="."]
+scale = Vector2(1.1875, 1.25)
+texture = ExtResource("2_bdu0o")
+
+[node name="AreaEauBenite" type="Area2D" parent="."]
+
+[node name="CollisionAreaEau" type="CollisionShape2D" parent="AreaEauBenite"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_qm7u3")
+
+[node name="CollisionEauBenite" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_f8fqe")

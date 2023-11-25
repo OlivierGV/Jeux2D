@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://ctht40gh8g0qe"]
+
+[ext_resource type="Script" path="res://Scripts/character_fleche.gd" id="1_3oysg"]
+[ext_resource type="Texture2D" uid="uid://dyexb66ssalau" path="res://Assets/ArmesSecondaires/Arrows_pack.png" id="1_rqox8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1iyb3"]
+size = Vector2(455, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5pecx"]
+atlas = ExtResource("1_rqox8")
+region = Rect2(0, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lsn71"]
+atlas = ExtResource("1_rqox8")
+region = Rect2(1024, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_by42d"]
+atlas = ExtResource("1_rqox8")
+region = Rect2(2048, 0, 1024, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oxeby"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5pecx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lsn71")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_by42d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterFleche" type="CharacterBody2D"]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_3oysg")
+
+[node name="CollisionFleche" type="CollisionShape2D" parent="."]
+position = Vector2(-17.5, -30)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_1iyb3")
+
+[node name="AnimatedSpriteFleche" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_oxeby")
+autoplay = "default"

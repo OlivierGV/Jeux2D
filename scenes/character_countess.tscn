@@ -1,134 +1,143 @@
-[gd_scene load_steps=40 format=3 uid="uid://cid30r6100elw"]
+[gd_scene load_steps=43 format=3 uid="uid://cid30r6100elw"]
 
+[ext_resource type="Texture2D" uid="uid://s52crvm1fkdm" path="res://Assets/craftpix-net-506778-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Attack_1.png" id="1_1b6mm"]
 [ext_resource type="Script" path="res://Scripts/character_countess.gd" id="1_milai"]
-[ext_resource type="Texture2D" uid="uid://s52crvm1fkdm" path="res://assets/craftpix-net-506778-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Attack_1.png" id="2_70udk"]
-[ext_resource type="Texture2D" uid="uid://dwrlufnhhktor" path="res://assets/craftpix-net-506778-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Dead.png" id="3_mog45"]
-[ext_resource type="Texture2D" uid="uid://bayqbl12hog2y" path="res://assets/craftpix-net-506778-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Idle.png" id="4_d1ouo"]
-[ext_resource type="Texture2D" uid="uid://b0uflc5hfjgc0" path="res://assets/craftpix-net-506778-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Jump.png" id="5_xu05v"]
-[ext_resource type="Texture2D" uid="uid://k21icnkb5wfn" path="res://assets/craftpix-net-506778-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Run.png" id="6_2usp7"]
+[ext_resource type="Texture2D" uid="uid://bayqbl12hog2y" path="res://Assets/craftpix-net-506778-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Idle.png" id="2_qdtxu"]
+[ext_resource type="Texture2D" uid="uid://b0uflc5hfjgc0" path="res://Assets/craftpix-net-506778-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Jump.png" id="3_6vkxa"]
+[ext_resource type="Texture2D" uid="uid://dwrlufnhhktor" path="res://Assets/craftpix-net-506778-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Dead.png" id="3_xb6ve"]
+[ext_resource type="Texture2D" uid="uid://k21icnkb5wfn" path="res://Assets/craftpix-net-506778-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Run.png" id="4_7wisq"]
+[ext_resource type="Texture2D" uid="uid://cyf6qg1ueugoa" path="res://Assets/craftpix-net-506778-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Hurt.png" id="4_so3k6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v0o18"]
-atlas = ExtResource("2_70udk")
+atlas = ExtResource("1_1b6mm")
 region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_deh71"]
-atlas = ExtResource("2_70udk")
+atlas = ExtResource("1_1b6mm")
 region = Rect2(128, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xee7h"]
-atlas = ExtResource("2_70udk")
+atlas = ExtResource("1_1b6mm")
 region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_087ah"]
-atlas = ExtResource("2_70udk")
+atlas = ExtResource("1_1b6mm")
 region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5ftjs"]
-atlas = ExtResource("2_70udk")
+atlas = ExtResource("1_1b6mm")
 region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8uetv"]
-atlas = ExtResource("2_70udk")
+atlas = ExtResource("1_1b6mm")
 region = Rect2(640, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8eigj"]
-atlas = ExtResource("3_mog45")
+atlas = ExtResource("3_xb6ve")
 region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mo4wv"]
-atlas = ExtResource("3_mog45")
+atlas = ExtResource("3_xb6ve")
 region = Rect2(128, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_muf1k"]
-atlas = ExtResource("3_mog45")
+atlas = ExtResource("3_xb6ve")
 region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r24yp"]
-atlas = ExtResource("3_mog45")
+atlas = ExtResource("3_xb6ve")
 region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o003x"]
-atlas = ExtResource("3_mog45")
+atlas = ExtResource("3_xb6ve")
 region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p37k4"]
-atlas = ExtResource("3_mog45")
+atlas = ExtResource("3_xb6ve")
 region = Rect2(640, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ikx00"]
-atlas = ExtResource("3_mog45")
+atlas = ExtResource("3_xb6ve")
 region = Rect2(768, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5fvmu"]
-atlas = ExtResource("3_mog45")
+atlas = ExtResource("3_xb6ve")
 region = Rect2(896, 0, 128, 128)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_54kfi"]
+atlas = ExtResource("4_so3k6")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtase"]
+atlas = ExtResource("4_so3k6")
+region = Rect2(128, 0, 128, 128)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_5fnrv"]
-atlas = ExtResource("4_d1ouo")
+atlas = ExtResource("2_qdtxu")
 region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vppqm"]
-atlas = ExtResource("4_d1ouo")
+atlas = ExtResource("2_qdtxu")
 region = Rect2(128, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dt817"]
-atlas = ExtResource("4_d1ouo")
+atlas = ExtResource("2_qdtxu")
 region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4tybw"]
-atlas = ExtResource("4_d1ouo")
+atlas = ExtResource("2_qdtxu")
 region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_isl42"]
-atlas = ExtResource("4_d1ouo")
+atlas = ExtResource("2_qdtxu")
 region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jsp5q"]
-atlas = ExtResource("5_xu05v")
+atlas = ExtResource("3_6vkxa")
 region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pfwne"]
-atlas = ExtResource("5_xu05v")
+atlas = ExtResource("3_6vkxa")
 region = Rect2(128, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lgi7l"]
-atlas = ExtResource("5_xu05v")
+atlas = ExtResource("3_6vkxa")
 region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5qbvn"]
-atlas = ExtResource("5_xu05v")
+atlas = ExtResource("3_6vkxa")
 region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mlguj"]
-atlas = ExtResource("5_xu05v")
+atlas = ExtResource("3_6vkxa")
 region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u0wyl"]
-atlas = ExtResource("5_xu05v")
+atlas = ExtResource("3_6vkxa")
 region = Rect2(640, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_73vfg"]
-atlas = ExtResource("6_2usp7")
+atlas = ExtResource("4_7wisq")
 region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1lk3a"]
-atlas = ExtResource("6_2usp7")
+atlas = ExtResource("4_7wisq")
 region = Rect2(128, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x5xka"]
-atlas = ExtResource("6_2usp7")
+atlas = ExtResource("4_7wisq")
 region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y7kh2"]
-atlas = ExtResource("6_2usp7")
+atlas = ExtResource("4_7wisq")
 region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pra7j"]
-atlas = ExtResource("6_2usp7")
+atlas = ExtResource("4_7wisq")
 region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oanwo"]
-atlas = ExtResource("6_2usp7")
+atlas = ExtResource("4_7wisq")
 region = Rect2(640, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4ksj3"]
@@ -183,6 +192,17 @@ animations = [{
 }],
 "loop": true,
 "name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_54kfi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtase")
+}],
+"loop": true,
+"name": &"hurt",
 "speed": 5.0
 }, {
 "frames": [{
@@ -256,13 +276,12 @@ animations = [{
 radius = 16.0
 height = 78.0
 
-[node name="CharacterCountess" type="CharacterBody2D" groups=["joueur"]]
-collision_layer = 3
+[node name="CharacterCountess" type="CharacterBody2D" groups=["Joueur"]]
 script = ExtResource("1_milai")
 
 [node name="AnimatedSpriteCountess" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4ksj3")
-animation = &"dead"
+animation = &"hurt"
 
 [node name="CollisionCountess" type="CollisionShape2D" parent="."]
 position = Vector2(-3, 31)
@@ -270,3 +289,9 @@ shape = SubResource("CapsuleShape2D_ak6lj")
 
 [node name="TimerDash" type="Timer" parent="."]
 wait_time = 5.0
+
+[node name="MarkerProjectile" type="Marker2D" parent="."]
+position = Vector2(40, 11)
+
+[node name="MarkerEpee" type="Marker2D" parent="."]
+position = Vector2(32, -24)

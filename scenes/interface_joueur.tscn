@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://brmxmjcevne7"]
+
+[ext_resource type="Script" path="res://Scripts/interface_joueur.gd" id="1_els0m"]
+
+[node name="interface_joueur" type="GridContainer"]
+process_mode = 3
+custom_minimum_size = Vector2(200, 200)
+offset_right = 200.0
+offset_bottom = 200.0
+script = ExtResource("1_els0m")
+
+[node name="RichTextLabel_pv" type="RichTextLabel" parent="."]
+clip_contents = false
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Vie : 0/100"
+fit_content = true
+
+[node name="RichTextLabel_argent" type="RichTextLabel" parent="."]
+layout_mode = 2
+text = "Argent : 0
+"
+fit_content = true

@@ -6,11 +6,10 @@ var item_prix = 0
 @onready var liste = $ItemList_objets
 # Dictionnaire des items pouvant être achetés
 var objets_magasin = {
-	"Flèche":{"peut_acheter":30, "icone":'res://icon.svg', "type":"Ammunition", "cout":10},
-	"Couteau à lancer":{"peut_acheter":1, "icone":'res://icon.svg', "type":"Arme secondaire", "cout":25},
-	"Eau bénite":{"peut_acheter":10, "icone":'res://icon.svg', "type":"Projectile", "cout":25},
-	"Bombe paralysante":{"peut_acheter":10, "icone":'res://icon.svg', "type":"Projectile", "cout":25},
-	"Cape":{"peut_acheter":1, "icone":'res://icon.svg', "type":"Armure", "cout":25}
+	"Flèche":{"peut_acheter":30, "icone":'res://Assets/ArmesSecondaires/iconefleche.png', "type":"Ammunition", "cout":10},
+	"Eau bénite":{"peut_acheter":10, "icone":'res://Assets/ArmesSecondaires/iconeeau.png', "type":"Projectile", "cout":25},
+	"Bombe paralysante":{"peut_acheter":10, "icone":'res://Assets/ArmesSecondaires/iconebombe.png', "type":"Projectile", "cout":25},
+	"Cape":{"peut_acheter":1, "icone":'res://Assets/ArmesSecondaires/cloth_hood.png', "type":"Armure", "cout":25}
 }
 
 # Called when the node enters the scene tree for the first time.
@@ -29,7 +28,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	$RichTextLabel_argent.text = "Argent : " +  str(joueur[0].argent)
 
 
 """

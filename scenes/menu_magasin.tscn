@@ -4,8 +4,10 @@
 
 [node name="MenuMagasin" type="ColorRect"]
 process_mode = 3
-offset_right = 645.0
-offset_bottom = 329.0
+offset_left = 255.0
+offset_top = 123.0
+offset_right = 900.0
+offset_bottom = 452.0
 color = Color(0.172549, 0.172549, 0.172549, 1)
 script = ExtResource("1_ljey2")
 
@@ -21,6 +23,7 @@ item_count = 3
 max_columns = 3
 same_column_width = true
 icon_mode = 0
+fixed_icon_size = Vector2i(64, 64)
 item_0/text = "Nom"
 item_0/selectable = false
 item_0/disabled = true
