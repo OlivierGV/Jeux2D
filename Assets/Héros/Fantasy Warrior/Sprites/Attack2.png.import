@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2vt7q7hsjo0l"
-path="res://.godot/imported/Attack2.png-9f44173334be2a05e457b902df62d943.ctex"
+path="res://.godot/imported/Attack2.png-085bc4c5a7de6f73fa236209e779878f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites-et-tilesets/Héros/Fantasy Warrior/Sprites/Attack2.png"
-dest_files=["res://.godot/imported/Attack2.png-9f44173334be2a05e457b902df62d943.ctex"]
+source_file="res://Assets/Héros/Fantasy Warrior/Sprites/Attack2.png"
+dest_files=["res://.godot/imported/Attack2.png-085bc4c5a7de6f73fa236209e779878f.ctex"]
 
 [params]
 

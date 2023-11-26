@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dh0ho0ixd4vnw"
-path="res://.godot/imported/1.png-1f8c8db2709f5f21c73fbe92da479c8e.ctex"
+path="res://.godot/imported/1.png-9bcb15cb5a446b4fe2d32f9e2e7095bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites-et-tilesets/Foret/Ennemis/werewolf/walk/1.png"
-dest_files=["res://.godot/imported/1.png-1f8c8db2709f5f21c73fbe92da479c8e.ctex"]
+source_file="res://Assets/Foret/Ennemis/werewolf/walk/1.png"
+dest_files=["res://.godot/imported/1.png-9bcb15cb5a446b4fe2d32f9e2e7095bf.ctex"]
 
 [params]
 

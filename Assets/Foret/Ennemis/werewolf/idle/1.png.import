@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwtadofuebaqa"
-path="res://.godot/imported/1.png-a5efdde3a32a2135348cdc2d502fe16d.ctex"
+path="res://.godot/imported/1.png-b014d6f854396d58e4192de9a05bd4ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites-et-tilesets/Foret/Ennemis/werewolf/idle/1.png"
-dest_files=["res://.godot/imported/1.png-a5efdde3a32a2135348cdc2d502fe16d.ctex"]
+source_file="res://Assets/Foret/Ennemis/werewolf/idle/1.png"
+dest_files=["res://.godot/imported/1.png-b014d6f854396d58e4192de9a05bd4ab.ctex"]
 
 [params]
 

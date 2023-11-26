@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cis72cyxurcq8"
-path="res://.godot/imported/Take hit.png-803a07851995038927c613cf642681a0.ctex"
+path="res://.godot/imported/Take hit.png-3f1d42d3e5f77dd26b3e9089e636cd1f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites-et-tilesets/Héros/Fantasy Warrior/Sprites/Take hit.png"
-dest_files=["res://.godot/imported/Take hit.png-803a07851995038927c613cf642681a0.ctex"]
+source_file="res://Assets/Héros/Fantasy Warrior/Sprites/Take hit.png"
+dest_files=["res://.godot/imported/Take hit.png-3f1d42d3e5f77dd26b3e9089e636cd1f.ctex"]
 
 [params]
 

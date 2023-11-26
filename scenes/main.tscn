@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://cid30r6100elw" path="res://Scenes/character_countess.tscn" id="1_vsps0"]
 [ext_resource type="PackedScene" uid="uid://c2ulio8yogxv8" path="res://Scenes/body_epee.tscn" id="2_cn4ar"]
-[ext_resource type="PackedScene" uid="uid://broxkghng0wv0" path="res://Scenes/niveau_test.tscn" id="2_k06t5"]
-[ext_resource type="PackedScene" uid="uid://ckbhqe5smkstk" path="res://Scenes/character_marchand.tscn" id="4_7a2xq"]
 [ext_resource type="PackedScene" uid="uid://brmxmjcevne7" path="res://Scenes/interface_joueur.tscn" id="5_1bjg0"]
+[ext_resource type="PackedScene" uid="uid://xpdxtno18cjp" path="res://Scenes/area_drapeau_fin.tscn" id="6_ox802"]
+[ext_resource type="PackedScene" uid="uid://0jnfvo46euwj" path="res://Scenes/controlleur_jeu.tscn" id="7_ogj2e"]
 
 [node name="Main" type="Node"]
 
@@ -14,10 +14,9 @@ position = Vector2(119, 148)
 [node name="BodyEpee" parent="CharacterCountess" instance=ExtResource("2_cn4ar")]
 position = Vector2(34, -22)
 
-[node name="NiveauTest" parent="." instance=ExtResource("2_k06t5")]
-position = Vector2(12, 266)
-
-[node name="CharacterMarchand" parent="." instance=ExtResource("4_7a2xq")]
-position = Vector2(578, 230)
-
 [node name="interface_joueur" parent="." instance=ExtResource("5_1bjg0")]
+
+[node name="Controlleur_jeu" parent="." instance=ExtResource("7_ogj2e")]
+
+[node name="AreaDrapeauFin" parent="." instance=ExtResource("6_ox802")]
+position = Vector2(380, 292)

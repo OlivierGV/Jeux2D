@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5shwbvtbnt5"
-path="res://.godot/imported/Fall.png-169a2e32b3d1851183e36bd665f54cad.ctex"
+path="res://.godot/imported/Fall.png-a68ec42ec492067bf99737ccc643dea2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites-et-tilesets/Héros/Fantasy Warrior/Sprites/Fall.png"
-dest_files=["res://.godot/imported/Fall.png-169a2e32b3d1851183e36bd665f54cad.ctex"]
+source_file="res://Assets/Héros/Fantasy Warrior/Sprites/Fall.png"
+dest_files=["res://.godot/imported/Fall.png-a68ec42ec492067bf99737ccc643dea2.ctex"]
 
 [params]
 

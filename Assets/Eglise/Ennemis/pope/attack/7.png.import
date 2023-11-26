@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmi5ws6kvn1q6"
-path="res://.godot/imported/7.png-5c95411492f98d0dbd98396af7399608.ctex"
+path="res://.godot/imported/7.png-b5fb1926f7da487fa8c8a9f75abf3ce9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites-et-tilesets/Eglise/Ennemis/pope/attack/7.png"
-dest_files=["res://.godot/imported/7.png-5c95411492f98d0dbd98396af7399608.ctex"]
+source_file="res://Assets/Eglise/Ennemis/pope/attack/7.png"
+dest_files=["res://.godot/imported/7.png-b5fb1926f7da487fa8c8a9f75abf3ce9.ctex"]
 
 [params]
 

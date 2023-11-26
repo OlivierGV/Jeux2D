@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxtgl0dxnfl28"
-path="res://.godot/imported/Death.png-51fc93ecde874de2950ab894c089242b.ctex"
+path="res://.godot/imported/Death.png-2ea6af2601393a2647c9420e0af92c01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites-et-tilesets/Héros/Fantasy Warrior/Sprites/Death.png"
-dest_files=["res://.godot/imported/Death.png-51fc93ecde874de2950ab894c089242b.ctex"]
+source_file="res://Assets/Héros/Fantasy Warrior/Sprites/Death.png"
+dest_files=["res://.godot/imported/Death.png-2ea6af2601393a2647c9420e0af92c01.ctex"]
 
 [params]
 
