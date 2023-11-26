@@ -300,7 +300,7 @@ disabled = true
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_2yu4q")
 animation = &"walk"
-frame_progress = 0.0885532
+frame_progress = 0.56669
 
 [node name="TimerTransformation" type="Timer" parent="."]
 wait_time = 1.1
