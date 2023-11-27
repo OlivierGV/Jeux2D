@@ -49,18 +49,3 @@ func _on_area_etang_4_body_entered(body):
 func _on_area_etang_4_body_exited(body):
 	body.SPEED = body.SPEED*4
 
-
-func _on_area_etang_5_body_entered(body):
-	body.SPEED = body.SPEED/4
-
-
-func _on_area_etang_5_body_exited(body):
-	body.SPEED = body.SPEED*4
-
-
-func _on_area_etang_6_body_entered(body):
-	body.SPEED = body.SPEED/4
-
-
-func _on_area_etang_6_body_exited(body):
-	body.SPEED = body.SPEED*4
