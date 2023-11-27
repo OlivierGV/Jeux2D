@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bno2lnax7mnc7"]
+
+[ext_resource type="Texture2D" uid="uid://cyksba0sxtahh" path="res://Skeleton_Archer/Arrow.png" id="1_8ihr4"]
+[ext_resource type="Script" path="res://fleche2.gd" id="1_ovvht"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hk2w4"]
+size = Vector2(23, 3)
+
+[node name="fleche" type="Area2D"]
+script = ExtResource("1_ovvht")
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(11.5, 0.5)
+shape = SubResource("RectangleShape2D_hk2w4")
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_8ihr4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
