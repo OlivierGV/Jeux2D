@@ -1,9 +1,8 @@
-[gd_scene load_steps=33 format=3 uid="uid://ouqgubpyyma2"]
+[gd_scene load_steps=39 format=3 uid="uid://ouqgubpyyma2"]
 
 [ext_resource type="Script" path="res://Scripts/niveau_foret.gd" id="1_3oscy"]
 [ext_resource type="Texture2D" uid="uid://bffja23se705n" path="res://Assets/Foret/TileSets/1 Tiles/Tileset.png" id="1_vimbs"]
 [ext_resource type="Texture2D" uid="uid://c0no8vbf200bf" path="res://Assets/Foret/TileSets/2 Background/Background.png" id="2_xsdhm"]
-[ext_resource type="Texture2D" uid="uid://bwwghpeac4vrd" path="res://Assets/Foret/TileSets/3 Objects/Trees/1.png" id="4_akdhp"]
 [ext_resource type="Texture2D" uid="uid://dcc4ub5uigj4n" path="res://Assets/Foret/TileSets/3 Objects/Trees/2.png" id="5_ijgyp"]
 [ext_resource type="Texture2D" uid="uid://bolskde50qihe" path="res://Assets/Foret/TileSets/3 Objects/Trees/3.png" id="6_c73ki"]
 [ext_resource type="Texture2D" uid="uid://bdv664srvggsv" path="res://Assets/Foret/TileSets/3 Objects/Willows/1.png" id="7_78j8o"]
@@ -14,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://c7hbeidyt1m7c" path="res://Assets/Foret/TileSets/3 Objects/Bushes/4.png" id="15_q5cme"]
 [ext_resource type="AudioStream" uid="uid://diyi4x55idn3r" path="res://Assets/y2mate.is - Max Lilja Broken Beauty Othercide-yyJI3MiXvpw-192k-1699398495.wav" id="16_kpree"]
 [ext_resource type="Texture2D" uid="uid://b78tpa0okxyuu" path="res://Assets/Foret/TileSets/3 Objects/Stones/1.png" id="16_pgx1n"]
+[ext_resource type="Texture2D" uid="uid://c6knjglm8xqbk" path="res://Assets/Foret/TileSets/4 Animated objects/Chest.png" id="16_wxbhs"]
 [ext_resource type="PackedScene" uid="uid://rm8ac5x2hkoy" path="res://Scene/bandit.tscn" id="18_7v4tx"]
 [ext_resource type="PackedScene" uid="uid://dj6a4yrf8avco" path="res://Scene/character_countess.tscn" id="19_3wssf"]
 
@@ -892,6 +892,45 @@ size = Vector2(43, 376.25)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u1spq"]
 size = Vector2(55, 236)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfyht"]
+atlas = ExtResource("16_wxbhs")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qah7f"]
+atlas = ExtResource("16_wxbhs")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tsfe"]
+atlas = ExtResource("16_wxbhs")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6w755"]
+atlas = ExtResource("16_wxbhs")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5de13"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfyht")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qah7f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4tsfe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6w755")
+}],
+"loop": false,
+"name": &"ouvert",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n44jf"]
+size = Vector2(26, 23)
+
 [node name="NiveauForet" type="Node"]
 script = ExtResource("1_3oscy")
 
@@ -920,7 +959,6 @@ texture = ExtResource("2_xsdhm")
 
 [node name="Arbre" type="Sprite2D" parent="."]
 position = Vector2(1610, 576)
-texture = ExtResource("4_akdhp")
 
 [node name="Arbre2" type="Sprite2D" parent="."]
 position = Vector2(-1, 449)
@@ -1010,13 +1048,13 @@ shape = SubResource("RectangleShape2D_1mi3p")
 position = Vector2(1455, 138.5)
 shape = SubResource("RectangleShape2D_i4iti")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBodyArbrelimite" type="StaticBody2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="StaticBodyArbrelimite"]
 position = Vector2(2311, 454)
 texture = ExtResource("6_c73ki")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBodyArbrelimite"]
 position = Vector2(2305, 341)
 shape = SubResource("RectangleShape2D_tsddf")
 
@@ -1039,7 +1077,7 @@ shape = SubResource("RectangleShape2D_u1spq")
 position = Vector2(821, 537)
 
 [node name="CharacterCountess" parent="." instance=ExtResource("19_3wssf")]
-position = Vector2(86, 192)
+position = Vector2(1321, 28)
 
 [node name="Bandit2" parent="." instance=ExtResource("18_7v4tx")]
 position = Vector2(1793, 542)
@@ -1055,13 +1093,39 @@ offset_bottom = 156.0
 text = "Apuie sur clic gauche pour attaquer avec ton épée."
 
 [node name="Bandit4" parent="." instance=ExtResource("18_7v4tx")]
-position = Vector2(901, 79)
+position = Vector2(881, 72)
 
 [node name="Bandit5" parent="." instance=ExtResource("18_7v4tx")]
 position = Vector2(1198, 299)
 
 [node name="Bandit6" parent="." instance=ExtResource("18_7v4tx")]
 position = Vector2(177, 542)
+
+[node name="Bandit7" parent="." instance=ExtResource("18_7v4tx")]
+position = Vector2(1760, 109)
+
+[node name="Bandit8" parent="." instance=ExtResource("18_7v4tx")]
+position = Vector2(1625, 130)
+
+[node name="Bandit9" parent="." instance=ExtResource("18_7v4tx")]
+position = Vector2(1648, 29)
+
+[node name="Bandit10" parent="." instance=ExtResource("18_7v4tx")]
+position = Vector2(1388, 78)
+
+[node name="Bandit11" parent="." instance=ExtResource("18_7v4tx")]
+position = Vector2(1512, 72)
+
+[node name="Coffre" type="AnimatedSprite2D" parent="."]
+position = Vector2(1250, 80)
+sprite_frames = SubResource("SpriteFrames_5de13")
+animation = &"ouvert"
+
+[node name="CoffreDeclencheur" type="Area2D" parent="Coffre"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coffre/CoffreDeclencheur"]
+position = Vector2(-3, 3.5)
+shape = SubResource("RectangleShape2D_n44jf")
 
 [connection signal="body_entered" from="AreaTrou" to="." method="_on_area_trou_body_entered"]
 [connection signal="body_entered" from="AreaEtang" to="." method="_on_area_etang_body_entered"]
@@ -1076,3 +1140,4 @@ position = Vector2(177, 542)
 [connection signal="body_exited" from="AreaEtang5" to="." method="_on_area_etang_5_body_exited"]
 [connection signal="body_entered" from="AreaEtang6" to="." method="_on_area_etang_6_body_entered"]
 [connection signal="body_exited" from="AreaEtang6" to="." method="_on_area_etang_6_body_exited"]
+[connection signal="body_entered" from="Coffre/CoffreDeclencheur" to="." method="_on_coffre_declencheur_body_entered"]
