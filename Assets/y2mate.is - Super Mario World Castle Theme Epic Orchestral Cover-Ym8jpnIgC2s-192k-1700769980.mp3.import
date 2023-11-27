@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://fifkuj573a42"
+path="res://.godot/imported/y2mate.is - Super Mario World Castle Theme Epic Orchestral Cover-Ym8jpnIgC2s-192k-1700769980.mp3-9d5973acaf5abadd686e81ac330e0f80.mp3str"
+
+[deps]
+
+source_file="res://Assets/y2mate.is - Super Mario World Castle Theme Epic Orchestral Cover-Ym8jpnIgC2s-192k-1700769980.mp3"
+dest_files=["res://.godot/imported/y2mate.is - Super Mario World Castle Theme Epic Orchestral Cover-Ym8jpnIgC2s-192k-1700769980.mp3-9d5973acaf5abadd686e81ac330e0f80.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
